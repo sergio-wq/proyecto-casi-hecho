@@ -26,6 +26,8 @@ app.use('/api/equipos', equipoRoutes);    // Equipos
 app.use('/api/jugadores', jugadorRoutes); // Jugadores
 app.use('/api/asistencia', asistenciaRoutes);
 app.use('/api/usuarios', usuarioRoutes);
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 
 // ✅ Ruta para servir el HTML de recuperación

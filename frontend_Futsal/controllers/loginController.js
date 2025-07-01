@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+
     // --- SECCIÓN 1: DECLARACIÓN DE VARIABLES DEL DOM ---
     
     // Contenedores y Cajas Traseras (para la animación)
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (response.ok) {
                 alert(data.mensaje);
                 localStorage.setItem('token', data.token);
-                localStorage.setItem('usuario', JSON.stringify(data.usuario));
+                localStorage.setItem('idUsuario', data.usuario.id);
 
                 // 🟡 Agregar rol legible para usar en frontend
                 if (data.usuario.rol === 1) {
